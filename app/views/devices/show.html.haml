@@ -1,4 +1,5 @@
 %h2= @device.name
+%p= link_to "Edit this device", edit_room_device_path(@device)
 
 %ul
   - @groups.each do |group|

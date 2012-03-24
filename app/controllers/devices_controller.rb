@@ -5,7 +5,7 @@ class DevicesController < ApplicationController
   before_filter :flatten_details, :only => [:create, :update]
   
   def new
-    @device   = Device.new(:category => params["category"])
+    @device   = Device.new(:category => params["category"])    
     @groups   = DeviceInformation.groups(params["category"])
   end
   
