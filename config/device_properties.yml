@@ -1,0 +1,21 @@
+Computer:
+  Product Information:
+    - Brand
+    - Model number
+  Hardware Information:
+    - Memory
+    - Hard drive space
+    - 32-bit or 64-bit?
+    - CPU speed
+  Software Information:
+    - Computer name
+    - Operating system
+    - 32-bit or 64-bit?
+    - Supports Yale domain login?
+    - Encryption enabled?
+    
+Router:
+  Basic Information:
+    - Brand
+    - Model Number
+    - Ethernet Ports
