@@ -5,7 +5,7 @@ Computer:
   Hardware Information:
     - Memory
     - Hard drive space
-    - 32-bit or 64-bit?
+    - Is 32-bit or 64-bit?
     - CPU speed
   Software Information:
     - Computer name
@@ -13,9 +13,22 @@ Computer:
     - 32-bit or 64-bit?
     - Supports Yale domain login?
     - Encryption enabled?
-    
+    - Network shares
+
 Router:
-  Basic Information:
+  Product Information:
     - Brand
-    - Model Number
-    - Ethernet Ports
+    - Model number
+  Hardware Information:
+    - Wired or wireless?
+    - Number of ethernet ports
+  Software Information:
+    - Wireless network encryption type
+
+Printer:
+  Product Information:
+    - Brand
+    - Model number
+  Hardware Information:
+    - Wired or wireless
+    - Network enabled?
