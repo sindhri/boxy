@@ -1,0 +1,12 @@
+= form_for(@device, :url => room_devices_path) do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.hidden_field :category
+
+  - @groups.each do |group|
+    %h3= group.name
+    - group.fields.each do |field_name|
+      %p
+        = label_tag "details[#{group.name}][#{field_name}]", "#{field_name}:"
+        = text_field_tag "details[#{group.name}][#{field_name}]"
+  = submit_tag

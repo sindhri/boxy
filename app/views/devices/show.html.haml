@@ -1,0 +1,10 @@
+%h2= @device.name
+
+%ul
+  - @groups.each do |group|
+    %h3= group.name
+    - group.fields.each do |field_name|
+      %p 
+        = "#{field_name}: "
+        = @details[group.name][field_name]
+  
