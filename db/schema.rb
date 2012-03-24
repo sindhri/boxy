@@ -11,15 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120316221348) do
-
-  create_table "details", :force => true do |t|
-    t.text     "value"
-    t.integer  "device_id"
-    t.integer  "property_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
+ActiveRecord::Schema.define(:version => 20120316220556) do
 
   create_table "device_specification_categories", :force => true do |t|
     t.string   "name"
