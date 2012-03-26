@@ -1,13 +1,19 @@
 = form_for(@device, :url => url) do |f|
-  = f.label :name
-  = f.text_field :name
   = f.hidden_field :category
 
-  - @groups.each do |group|
+  = f.label :name
+  = f.text_field :name
+
+  - @device.groups.each do |group|
     %h3= group.name
-    - group.fields.each do |field_name|
+
+    - group.fields.each do |detail|
       %p
-        = label_tag "details[#{group.name}][#{field_name}]", "#{field_name}:"
-        = text_field_tag "details[#{group.name}][#{field_name}]",
-                        @details ? @details[group.name][field_name] : ""
-  = submit_tag
+        = f.fields_for :details, detail do |d|
+          = d.hidden_field :group
+          = d.hidden_field :name
+
+          = d.label :value, "#{detail.name}:"
+          = d.text_field :value
+
+  = f.submit

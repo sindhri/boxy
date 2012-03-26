@@ -2,10 +2,9 @@
 %p= link_to "Edit this device", edit_room_device_path(@device)
 
 %ul
-  - @groups.each do |group|
+  - @device.groups.each do |group|
     %h3= group.name
-    - group.fields.each do |field_name|
-      %p 
-        = "#{field_name}: "
-        = @details[group.name][field_name]
-  
+    - group.fields.each do |detail|
+      %p
+        = "#{detail.name}: "
+        = detail.value
